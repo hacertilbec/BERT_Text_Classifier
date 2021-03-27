@@ -1,5 +1,6 @@
 # BERT Text Classifier
 This is an example of Text Classification model by fine-tuning BERT(Bidirectional Encoder Representations from Transformers).
+
 In the project, there are **6 categories** to predict. These categories are:
 1. Phone number (ex. +905331234567, 05331234567, 5331234567, ...)
 2. Republic of Turkey Identity Number (ex. 27131846478, ...)
@@ -7,6 +8,7 @@ In the project, there are **6 categories** to predict. These categories are:
 4. Amount (ex. 15 TL, 20 USD, $20, 250000 TL, ...)
 5. Credit Card Number (ex. 1234 5678 9012 3456, 12345678 9012 3456...)
 6. Blood type (ex. 0 RH+, A RH-, A RH Negative)
+
 
 * The project is implemented in **python** language and the classification model build with **keras**.
 * Used BERT pretrained model: **"dbmdz/bert-base-turkish-128k-uncased"**
@@ -71,7 +73,7 @@ In the project, there are **6 categories** to predict. These categories are:
    ```sh
    python model_evaluation.py
    ```
-model_evaluation.py script will print out the performance summary table accordingly and save an excel file under output directory. This file will contain texts, actual labels and predicted labels of the test data.
+model_evaluation.py script will print out the performance summary table accordingly and save an excel file under the output directory. Saved excel file will contain texts, actual labels and predicted labels of the test data.
 
 **NOTE:** If you want to use provided trained model in the project and test the model with your test data, you can just process your test data (step 2) and evaluate the model (step 4).
 
