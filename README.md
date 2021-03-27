@@ -17,7 +17,7 @@ In the project, there are **6 categories** to predict. These categories are:
 
     .
     ├── data
-    │   ├── data                # contains some fake data for creating a sample training data
+    │   ├── data                # contains some data files for creating a sample training data
     │   │   └── ...
     │   ├── train               # contains a sample train data
     │   │   └── ...
@@ -45,6 +45,8 @@ In the project, there are **6 categories** to predict. These categories are:
 ## Prerequisites
 
 * python 3.7.2
+* You can download the trained model (trained with the sample train data) from [here](https://drive.google.com/file/d/1YzAmO-mfLLthpPF4YKjgI6E4lnFnQL4C/view?usp=sharing). You should put the trained model file under *model* directory.
+
 
 ## Installation
 
@@ -59,21 +61,23 @@ In the project, there are **6 categories** to predict. These categories are:
    
 ## Usage
 
-1. In the project, there are sample train and test data files. If you want to use your own train and test datasets you should check files under data/train and data/test folders and prepare your train and test dataset with the same structure. 
-2. In order to process train and test data files, you should run data_processing.py script with the following commands:
+*data_collection.py script used to generate a sample training data.*
+
+1. In the project, there are sample train and test data files. If you want to use your own train and test dataset you should check the files under *data/train* and *data/test* directories and prepare your train and test dataset with the same structure. 
+2. In order to process your train and test data files, you should run data_processing.py script with the following commands:
    ```sh
    python data_processing.py --input_filepath [train_data_filepath.xlsx] --type train
    python data_processing.py --input_filepath [test_data_filepath.xlsx] --type test
    ```
-3. You can train the classification model with running model_training.py script:
+3. You can train the classification model with running model_training.py script as below:
    ```sh
    python model_training.py
    ```
-4. Then, you can test the model performance on the test set by:
+4. You can test the model performance on the test set as below:
    ```sh
    python model_evaluation.py
    ```
-model_evaluation.py script will print out the performance summary table accordingly and save an excel file under the output directory. Saved excel file will contain texts, actual labels and predicted labels of the test data.
+model_evaluation.py script will print out the performance summary table and save an excel file under the **output** directory. Saved excel file will contain texts, actual labels and predicted labels of the test data.
 
-**NOTE:** If you want to use provided trained model in the project and test the model with your test data, you can just process your test data (step 2) and evaluate the model (step 4).
+**NOTE:** If you want to use provided trained model in the project and test the model with your test data, you should just process your test data (step 2) then you can evaluate the model (step 4).
 
